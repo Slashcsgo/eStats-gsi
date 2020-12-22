@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    background: transparent;
+    color: white;
+}
+
+code {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.tcolor{
+    color: rgb(255, 200, 0);
+}
+.bgtcolor{
+    /*background: rgb(255, 188, 28);*/
+}
+.bgtcolor_active{
+    background: rgb(103, 81, 0);
+}
+
+.ctcolor{
+    color: rgb(0, 166, 255);
+}
+.bgctcolor{
+    background: rgb(0, 136, 255);
+}
+.bgctcolor_active{
+    background: rgb(0, 72, 103);
+}
+
+.deadcolor{
+    background: black;
+}
+
+
+.hasHelmet{
+    background: #212121;
+}
+.hasntHelmet{
+    background: #7a7a7a;
+}
+
+
+.app {
+    width: 100%;
+    height: 100vh;
+}
+
+.radar{
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    width: 350px;
+    height: 380px;
+}
+
+
+
+.header {
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 1080px;
+    height: 95px;
+}
+.header-info{
+    /*border-radius: 10px 10px 0 0;*/
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+    width: 100%;
+    background: rgba(26, 49, 88, 0.8);
+}
+.header-info-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 70px;
+}
+.header-info-team{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 320px;
+    font-size: 25px;
+    font-weight: 700;
+}
+.header-info-left{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 390px;
+    /*color: rgb(255, 200, 0);*/
+}
+.header-info-center{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 300px;
+    /*background: rgba(255, 0, 0, 0.4);*/
+}
+.header-info-center-tscore{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 75px;
+    background: rgb(21, 41, 74);
+    font-size: 50px;
+    font-weight: 700;
+    /*color: rgb(255, 200, 0);*/
+}
+.header-info-center-center{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 150px;
+}
+.header-info-center-center-time{
+    display: flex;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+    font-weight: 700;
+}
+.header-info-center-center-round{
+    display: flex;
+    height: 25px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+.header-info-center-ctscore{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 75px;
+    background: rgb(21, 41, 74);
+    font-size: 50px;
+    font-weight: 700;
+    /*color: rgb(0, 166, 255);*/
+}
+.header-info-right{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 390px;
+    /*color: rgb(0, 166, 255);*/
+}
+.header-match-info{
+    height: 25px;
+    width: 100%;
+    background: rgba(0, 0, 255, 0.4);
+}
+/*TODO: MAKE MATCH INFO*/
+
+
+
+.killbar{
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    width: 350px;
+    height: 450px;
+    /*background: rgba(255, 0, 0, 0.4);*/
+}
+
+.side-card-slider {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 5px;
+    height: 65px;
+    width: 100%;
+    background: rgba(26, 49, 88, 0.6);
+}
+.side-card-slider>div{
+    height: 35px;
+}
+.side-card{
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    height: 65px;
+    width: 100%;
+}
+.side-card-armor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 100%;
+}
+.side-card-armor>p{
+    margin: 0 0 5px 0;
+    font-size: 25px;
+}
+.side-card-armor>div{
+    width: 20px;
+    height: 20px;
+}
+.side-card-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 170px;
+}
+.side-card-info>p{
+    margin: 0;
+}
+.side-card-stats{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+}
+.side-card-stats>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 100%;
+}
+.side-card-stats>div>p{
+    font-size: 22px;
+    margin: 0;
+}
+.side-card-stats>div>p:nth-child(1){
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.tside {
+    position: absolute;
+    left: 40px;
+    bottom: 34px;
+    width: 350px;
+    height: 420px;
+    /*background: rgba(255, 0, 0, 0.4);*/
+}
+.ctside {
+    position: absolute;
+    right: 40px;
+    bottom: 34px;
+    width: 350px;
+    height: 420px;
+    /*background: rgba(255, 0, 0, 0.4);*/
+}
+.player{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 720px;
+    height: 330px;
+}
+.player-card{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 230px;
+}
+.player-card-info{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    width: 100%;
+    height: 180px;
+}
+.player-card-info-avatar{
+    height: 180px;
+    width: 180px;
+    background: rgba(26, 49, 88, 0.4);
+    border-radius: 10px 10px 0 0;
+}
+.player-card-info-text{
+    display: flex;
+    flex-direction: row;
+    padding: 0 20px;
+    height: 50px;
+    width: 320px;
+    border-radius: 0 10px 0 0;
+    background: rgba(26, 49, 88, 0.8);
+}
+.player-card-info-text-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    background: rgba(21, 41, 74, 0.2);
+}
+.player-card-info-text-name {
+    display: flex;
+    height: 50px;
+    width: 220px;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    font-weight: 700;
+    /*background: rgba(255, 0, 0, 0.4);*/
+}
+.player-card-info-text-flag{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    background: rgba(21, 41, 74, 0.2);
+}
+.player-card-stats{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    border-radius: 0 10px 10px 10px;
+    width: 100%;
+    height: 50px;
+}
+.player-card-stats-health{
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    width: 180px;
+    background: rgba(26, 49, 88, 0.8);
+}
+.player-card-stats-health>div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    font-size: 30px;
+    font-weight: 700;
+}
+.player-card-stats-health>div>div{
+    width: 20px;
+    height: 20px;
+    background: #282828;
+}
+.player-card-stats-performance{
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    width: 340px;
+    padding: 0 10px;
+    background: rgba(26, 49, 88, 0.4);
+}
+.player-card-stats-performance-streak{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+    font-size: 18px;
+}
+.player-card-stats-performance-kad{
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+}
+.player-card-stats-performance-kad>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+}
+.player-card-stats-performance-kad>div>p{
+    margin: 0;
+}
+.player-card-stats-performance-kad>div>p:nth-child(1){
+    line-height: 14px;
+    font-size: 16px;
+}
+.player-card-stats-performance-kad>div>p:nth-child(2){
+    line-height: 28px;
+    font-size: 24px;
+}
+.player-card-stats-equipment{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 50px;
+    width: 140px;
+    padding: 0 20px;
+    background: rgba(26, 49, 88, 0.8);
+    font-size: 20px;
+}
+.player-card-stats-equipment>p>span:nth-child(1){
+    font-size: 30px;
+}
+.player-advert{
+    width: 100%;
+    height: 100px;
+}

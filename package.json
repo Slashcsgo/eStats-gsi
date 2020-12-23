@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "npm run e-start && npm run r-start",
+    "e-start": "node app.js",
+    "r-start": "cd ./view && npm start"
   },
   "keywords": [],
   "author": "",

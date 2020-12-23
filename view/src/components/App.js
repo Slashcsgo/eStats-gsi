@@ -19,11 +19,12 @@ class App extends React.Component{
     }
 
     componentDidMount() {
-        this.socket = openSocket('http://localhost:3001')
+        this.socket = openSocket('http://10.10.10.148:3001')
         this.socket.on('render', msg => this.setState(msg))
     }
 
     render(){
+        console.log(this.state)
         return(
             <div className={'app'}>
                 <Radar

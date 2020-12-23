@@ -1,5 +1,6 @@
 import React from 'react'
-import PlayerHelper from "../helpers/playerHelper";
+import PlayerHelper from "../helpers/playerHelper"
+import server from "../cfg/server.json"
 
 class Player extends React.Component{
     render(){
@@ -15,11 +16,11 @@ class Player extends React.Component{
             let name = player.name.length > 12 ? player.name.substring(0, 10) + "..." : player.name
 
             let imageSrc =
-                `http://localhost:3001/players/${PlayerHelper.getAvatar(player.id)}.png`
+                `http://${server.appip}:3001/players/${PlayerHelper.getAvatar(player.id)}.png`
             let flagSrc =
-                `http://localhost:3001/flags/${PlayerHelper.getCountry(player.id)}.png`
+                `http://${server.appip}:3001/flags/${PlayerHelper.getCountry(player.id)}.png`
             let teamSrc =
-                `http://localhost:3001/teams/${PlayerHelper.getTeam(player.id)}.png`
+                `http://${server.appip}:3001/teams/${PlayerHelper.getTeam(player.id)}.png`
 
             return(
                 <div className={'player'}>

@@ -90,6 +90,10 @@ code {
     height: 70px;
     width: 70px;
 }
+.header-info-logo>img{
+    width: 80%;
+    height: 80%;
+}
 .header-info-team{
     display: flex;
     justify-content: center;

@@ -109,6 +109,15 @@ class Process{
 
         return res
     }
+    getRound(data){
+        let res = {
+            winner: ""
+        }
+        if (data.round){
+            res.winner = data.round.win_team
+        }
+        return res
+    }
 
     get(data) {
         //processing header
@@ -122,10 +131,14 @@ class Process{
         let allPlayers = this.getAllPlayers(data)
         // console.log(allPlayers)
 
+        let round = this.getRound(data)
+        //console.log(round)
+
         let result = {
             header: header,
             player: player,
-            allPlayers: allPlayers
+            allPlayers: allPlayers,
+            round: round
         }
         return result
     }

@@ -63,17 +63,18 @@ code {
 
 
 .header {
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    align-items: center;
     position: absolute;
     top: 20px;
     left: 0;
     right: 0;
     margin: 0 auto;
     width: 1080px;
-    height: 95px;
+    /*height: 95px;*/
 }
 .header-info{
     /*border-radius: 10px 10px 0 0;*/
@@ -89,6 +90,7 @@ code {
     align-items: center;
     height: 70px;
     width: 70px;
+    background: rgba(255, 255, 255, 0.3);
 }
 .header-info-logo>img{
     width: 80%;
@@ -123,7 +125,7 @@ code {
     align-items: center;
     height: 100%;
     width: 75px;
-    background: rgb(21, 41, 74);
+    background: rgba(4, 14, 22, 0.4);
     font-size: 50px;
     font-weight: 700;
     /*color: rgb(255, 200, 0);*/
@@ -156,7 +158,7 @@ code {
     align-items: center;
     height: 100%;
     width: 75px;
-    background: rgb(21, 41, 74);
+    background: rgba(4, 14, 22, 0.4);
     font-size: 50px;
     font-weight: 700;
     /*color: rgb(0, 166, 255);*/
@@ -172,6 +174,28 @@ code {
     height: 25px;
     width: 100%;
     background: rgba(0, 0, 255, 0.4);
+}
+.header-live{
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    width: 150px;
+    background: rgba(26, 49, 88, 0.8);
+}
+.header-over{
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 400px;
+    font-size: 25px;
+    font-weight: 700;
+    background: rgba(26, 49, 88, 0.8);
 }
 /*TODO: MAKE MATCH INFO*/
 

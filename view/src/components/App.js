@@ -6,6 +6,7 @@ import TSide from "./TSide";
 import CTSide from "./CTSide";
 import Player from "./Player";
 import openSocket from "socket.io-client";
+import server from "../cfg/server.json"
 
 class App extends React.Component{
     constructor(props) {
@@ -19,7 +20,7 @@ class App extends React.Component{
     }
 
     componentDidMount() {
-        this.socket = openSocket('http://10.10.10.148:3001')
+        this.socket = openSocket(`http://${server.appip}:3001`)
         this.socket.on('render', msg => this.setState(msg))
     }
 
@@ -32,7 +33,10 @@ class App extends React.Component{
                     header={this.state.header}
                     player={this.state.player}
                 />
-                <Header header={this.state.header}/>
+                <Header 
+                    header={this.state.header}
+                    round={this.state.round}
+                />
                 <KillBar/>
                 <TSide
                     allPlayers={this.state.allPlayers}

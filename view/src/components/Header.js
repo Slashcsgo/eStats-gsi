@@ -1,12 +1,28 @@
 import React from 'react'
+import { Live, Over, Pause, Freeze } from './SubHeaders'
 import server from "../cfg/server.json"
 
 class Header extends React.Component{
+    getSubHeader(){
+        let sub = null;
+        
+        if (this.props.header.state === 'live')
+            sub = [<Live />]
+        if (this.props.header.state === 'over' && this.props.round && this.props.round.winner)
+            sub = [<Over winner={this.props.round.winner}/>, <Live />]
+        if (this.props.header.state === 'timeout_ct')
+            sub = [<Pause side={"ct"}/>]
+        if (this.props.header.state === 'timeout_t')
+            sub = [<Pause side={"t"}/>]
+        if (this.props.header.state === 'freezetime')
+            sub = [<Freeze />]
+
+        return sub
+    }
     render(){
-        console.log(this.props.header)
         if (this.props.header){
             let minutes = Math.floor(this.props.header.time / 60)
-            let seconds = String(Math.floor(this.props.header.time % 60))
+            let seconds = String(Math.ceil(this.props.header.time % 60))
                 .padStart(2, 0)
             let time = ""
 
@@ -15,11 +31,13 @@ class Header extends React.Component{
             if (state === 'live'){
                 time = `${minutes}:${seconds}`
             } else if (state === 'freezetime'){
-                time = "FREEZE"
+                time = `${minutes}:${seconds}`
             } else if (state === 'over'){
                 time = "OVER"
             } else if (state === 'bomb'){
                 time = "BOMB"
+            } else if (state === 'pause'){
+                time = "PAUSE"
             }
             return (
                 <div className={"header"}>
@@ -57,9 +75,7 @@ class Header extends React.Component{
                             </div>
                         </div>
                     </div>
-                    <div className={"header-match-info"}>
-                        
-                    </div>
+                    {this.getSubHeader()}
                 </div>
             )
         } else {
